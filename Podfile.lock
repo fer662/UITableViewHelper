@@ -1,0 +1,10 @@
+PODS:
+  - RuntimeHelpers (0.0.4)
+
+DEPENDENCIES:
+  - RuntimeHelpers
+
+SPEC CHECKSUMS:
+  RuntimeHelpers: 06726ff83f7f30aba36ae569d90feff37a28bef7
+
+COCOAPODS: 0.28.0
