@@ -10,6 +10,8 @@
 
 @implementation TableViewCell
 
+@synthesize object = _object;
+
 + (instancetype)cellFromNib;
 {
     return [[[NSBundle mainBundle] loadNibNamed:[self identifier] owner:nil options:nil] objectAtIndex:0];

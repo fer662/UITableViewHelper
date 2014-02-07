@@ -31,7 +31,7 @@ static char kOffscreenCellKey;
     [[self offscreenCell] setNeedsLayout];
     [[self offscreenCell] layoutIfNeeded];
     
-    return [[self offscreenCell].contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    return [[self offscreenCell].contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
 }
 
 #pragma mark -

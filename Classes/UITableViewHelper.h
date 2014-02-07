@@ -7,5 +7,6 @@
 //
 
 #import "TableViewCell.h"
+#import "AutoLayoutTableViewCell.h"
 #import "TableViewCellProtocol.h"
 #import "UITableView+UITableViewHelper.h"
