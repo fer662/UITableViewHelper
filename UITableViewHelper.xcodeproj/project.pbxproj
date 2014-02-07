@@ -39,6 +39,9 @@
 		E100625E16ADB13E00EDD9E3 /* TableViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCellProtocol.h; path = Classes/TableViewCellProtocol.h; sourceTree = SOURCE_ROOT; };
 		E167AAC918A424C30066D0D2 /* AutoLayoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoLayoutTableViewCell.h; path = Classes/AutoLayoutTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		E167AACA18A424C30066D0D2 /* AutoLayoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoLayoutTableViewCell.m; path = Classes/AutoLayoutTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		E167AADD18A526C40066D0D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E167AADF18A526C40066D0D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E167AAFA18A526C40066D0D2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F333CE6C841A41838CB989C0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +81,9 @@
 			children = (
 				E100624616ADB02E00EDD9E3 /* Foundation.framework */,
 				4C81B4FF3BAF49768C9F8419 /* libPods.a */,
+				E167AADD18A526C40066D0D2 /* CoreGraphics.framework */,
+				E167AADF18A526C40066D0D2 /* UIKit.framework */,
+				E167AAFA18A526C40066D0D2 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E100623816ADB02E00EDD9E3;
 			productRefGroup = E100624416ADB02E00EDD9E3 /* Products */;
@@ -270,6 +277,7 @@
 				DSTROOT = /tmp/UITableViewHelper.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UITableViewHelper-Prefix.pch";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

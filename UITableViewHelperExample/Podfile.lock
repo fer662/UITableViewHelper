@@ -1,0 +1,18 @@
+PODS:
+  - RuntimeHelpers (0.0.4)
+  - UITableViewHelper (0.0.1):
+    - RuntimeHelpers
+
+DEPENDENCIES:
+  - RuntimeHelpers
+  - UITableViewHelper (from `../UITableViewHelper.podspec`)
+
+EXTERNAL SOURCES:
+  UITableViewHelper:
+    :podspec: ../UITableViewHelper.podspec
+
+SPEC CHECKSUMS:
+  RuntimeHelpers: 06726ff83f7f30aba36ae569d90feff37a28bef7
+  UITableViewHelper: 563a730efccf15bf8baa08e0ac1fc0efc058d4c7
+
+COCOAPODS: 0.29.0
