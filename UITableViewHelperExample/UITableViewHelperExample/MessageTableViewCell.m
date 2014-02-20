@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -31,13 +30,23 @@
 
 #pragma mark - TableViewCellProtocol
 
++ (NSString *)nibNameForObject:(Message *)object
+{
+    //The check is crappy because of the nature of our mocked objects, but you get the idea
+    if ([object.sender isEqualToString:@"Paul"]) {
+        return @"MessageTableViewCellOutgoing";
+    }
+    else {
+        return @"MessageTableViewCellIncoming";
+    }
+}
+
 - (void)setObject:(Message *)message
 {
     //Configure the cell with the model object here
     [super setObject:message];
 
     self.messageLabel.text = message.text;
-    self.textView.text = message.text;
     self.nameLabel.text = message.sender;
     self.avatarImageView.image = message.avatar;
 }

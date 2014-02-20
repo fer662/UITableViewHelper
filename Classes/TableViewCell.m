@@ -45,11 +45,6 @@
     return [NSString stringWithFormat:@"%@_%@", NSStringFromClass(self), nibName];
 }
 
-+ (NSArray *)nibNames
-{
-    return @[NSStringFromClass([self class])];
-}
-
 + (NSString *)nibNameForObject:(id)object
 {
     return NSStringFromClass([self class]);

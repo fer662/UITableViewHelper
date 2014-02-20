@@ -21,38 +21,38 @@
                             <constraint firstAttribute="width" constant="50" id="vYB-YA-Mah"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-og-o8o">
-                        <rect key="frame" x="80" y="10" width="55" height="22"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="#name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-og-o8o">
+                        <rect key="frame" x="23" y="64" width="44" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPW-zP-Gqf" customClass="ExpandedTextView">
-                        <rect key="frame" x="20" y="60" width="280" height="139"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="230" translatesAutoresizingMaskIntoConstraints="NO" id="XDG-u5-0jd">
+                        <rect key="frame" x="80" y="10" width="230" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="DPW-zP-Gqf" secondAttribute="bottom" id="C0Z-Tw-HRl"/>
-                    <constraint firstItem="DPW-zP-Gqf" firstAttribute="top" secondItem="Uk6-El-orx" secondAttribute="bottom" id="ECB-gu-8f9"/>
+                    <constraint firstAttribute="trailing" secondItem="XDG-u5-0jd" secondAttribute="trailing" constant="10" id="D7D-tP-dVY"/>
                     <constraint firstItem="Uk6-El-orx" firstAttribute="top" secondItem="zUd-MX-6eW" secondAttribute="top" constant="10" id="ENV-ua-pnH"/>
-                    <constraint firstItem="uQZ-og-o8o" firstAttribute="top" secondItem="zUd-MX-6eW" secondAttribute="top" constant="10" id="EsO-5Z-x86"/>
-                    <constraint firstItem="uQZ-og-o8o" firstAttribute="leading" secondItem="Uk6-El-orx" secondAttribute="trailing" constant="10" id="JOX-6p-V5T"/>
-                    <constraint firstAttribute="trailing" secondItem="DPW-zP-Gqf" secondAttribute="trailing" constant="20" id="QLj-QS-1aP"/>
-                    <constraint firstItem="DPW-zP-Gqf" firstAttribute="leading" secondItem="zUd-MX-6eW" secondAttribute="leading" constant="20" id="VWm-CN-2GD"/>
+                    <constraint firstItem="Uk6-El-orx" firstAttribute="centerX" secondItem="uQZ-og-o8o" secondAttribute="centerX" id="FT4-ya-Qfk"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XDG-u5-0jd" secondAttribute="bottom" constant="10" id="MUp-EC-SWd"/>
+                    <constraint firstItem="uQZ-og-o8o" firstAttribute="top" secondItem="Uk6-El-orx" secondAttribute="bottom" constant="4" id="OlN-PS-tBw"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uQZ-og-o8o" secondAttribute="bottom" id="U1q-x2-FyS"/>
                     <constraint firstItem="Uk6-El-orx" firstAttribute="leading" secondItem="zUd-MX-6eW" secondAttribute="leading" constant="20" id="gn8-Tw-p2b"/>
+                    <constraint firstItem="XDG-u5-0jd" firstAttribute="top" secondItem="zUd-MX-6eW" secondAttribute="top" constant="10" id="jBH-ce-9KN"/>
+                    <constraint firstItem="XDG-u5-0jd" firstAttribute="leading" secondItem="Uk6-El-orx" secondAttribute="trailing" constant="10" id="lPK-6D-3lP"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="avatarImageView" destination="Uk6-El-orx" id="BdI-Zm-DfG"/>
+                <outlet property="messageLabel" destination="XDG-u5-0jd" id="Y1y-sl-pfS"/>
                 <outlet property="nameLabel" destination="uQZ-og-o8o" id="XqT-Hi-EDw"/>
-                <outlet property="textView" destination="DPW-zP-Gqf" id="FAY-Sg-fWD"/>
             </connections>
         </tableViewCell>
     </objects>

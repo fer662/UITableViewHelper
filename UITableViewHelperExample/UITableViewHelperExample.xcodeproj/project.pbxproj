@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A6ECEA650134C0E92B38434 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC3A6B70F634956B48B7787 /* libPods.a */; };
+		E133860518B6798B004ED023 /* MessageTableViewCellIncoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = E133860418B6798B004ED023 /* MessageTableViewCellIncoming.xib */; };
 		E167AB2818A532D20066D0D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E167AB2718A532D20066D0D2 /* Foundation.framework */; };
 		E167AB2A18A532D20066D0D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E167AB2918A532D20066D0D2 /* CoreGraphics.framework */; };
 		E167AB2C18A532D20066D0D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E167AB2B18A532D20066D0D2 /* UIKit.framework */; };
@@ -22,9 +23,8 @@
 		E167AB4918A532D20066D0D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E167AB2B18A532D20066D0D2 /* UIKit.framework */; };
 		E167AB6118A534350066D0D2 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB5D18A534350066D0D2 /* Message.m */; };
 		E167AB6218A534350066D0D2 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */; };
-		E167AB6318A534350066D0D2 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E167AB6018A534350066D0D2 /* MessageTableViewCell.xib */; };
+		E167AB6318A534350066D0D2 /* MessageTableViewCellOutgoing.xib in Resources */ = {isa = PBXBuildFile; fileRef = E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */; };
 		E167AB6518A534450066D0D2 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E167AB6418A534450066D0D2 /* avatar.jpg */; };
-		E167ABAE18A928240066D0D2 /* ExpandedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E167ABAD18A928240066D0D2 /* ExpandedTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		1DC3A6B70F634956B48B7787 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D838F057366D4563BBB5426A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E133860418B6798B004ED023 /* MessageTableViewCellIncoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCellIncoming.xib; sourceTree = "<group>"; };
 		E167AB2418A532D20066D0D2 /* UITableViewHelperExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITableViewHelperExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E167AB2718A532D20066D0D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E167AB2918A532D20066D0D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,10 +61,8 @@
 		E167AB5D18A534350066D0D2 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		E167AB5E18A534350066D0D2 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
-		E167AB6018A534350066D0D2 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCellOutgoing.xib; sourceTree = "<group>"; };
 		E167AB6418A534450066D0D2 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
-		E167ABAC18A928240066D0D2 /* ExpandedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedTextView.h; sourceTree = "<group>"; };
-		E167ABAD18A928240066D0D2 /* ExpandedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +131,10 @@
 				E167AB3D18A532D20066D0D2 /* ViewController.m */,
 				E167AB5C18A534350066D0D2 /* Message.h */,
 				E167AB5D18A534350066D0D2 /* Message.m */,
-				E167ABAC18A928240066D0D2 /* ExpandedTextView.h */,
-				E167ABAD18A928240066D0D2 /* ExpandedTextView.m */,
 				E167AB5E18A534350066D0D2 /* MessageTableViewCell.h */,
 				E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */,
-				E167AB6018A534350066D0D2 /* MessageTableViewCell.xib */,
+				E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */,
+				E133860418B6798B004ED023 /* MessageTableViewCellIncoming.xib */,
 				E167AB6418A534450066D0D2 /* avatar.jpg */,
 				E167AB3F18A532D20066D0D2 /* Images.xcassets */,
 				E167AB2E18A532D20066D0D2 /* Supporting Files */,
@@ -235,8 +233,9 @@
 			files = (
 				E167AB4018A532D20066D0D2 /* Images.xcassets in Resources */,
 				E167AB6518A534450066D0D2 /* avatar.jpg in Resources */,
-				E167AB6318A534350066D0D2 /* MessageTableViewCell.xib in Resources */,
+				E167AB6318A534350066D0D2 /* MessageTableViewCellOutgoing.xib in Resources */,
 				E167AB3218A532D20066D0D2 /* InfoPlist.strings in Resources */,
+				E133860518B6798B004ED023 /* MessageTableViewCellIncoming.xib in Resources */,
 				E167AB3B18A532D20066D0D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +291,6 @@
 				E167AB6118A534350066D0D2 /* Message.m in Sources */,
 				E167AB6218A534350066D0D2 /* MessageTableViewCell.m in Sources */,
 				E167AB3818A532D20066D0D2 /* AppDelegate.m in Sources */,
-				E167ABAE18A928240066D0D2 /* ExpandedTextView.m in Sources */,
 				E167AB3418A532D20066D0D2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,13 +17,14 @@ static char kOffscreenCellKey;
 
 + (AutoLayoutTableViewCell *)offscreenCellForNibName:(NSString *)nibName
 {
-    return [(id)self associatedObjectForKey:&kOffscreenCellKey orBlockResult:^id{
-        NSMutableDictionary *offscreenCells = [NSMutableDictionary dictionary];
-        for (NSString *nibName in [self nibNames]) {
-            offscreenCells[nibName] = [self cellFromNibNamed:nibName];
-        }
-        return [offscreenCells copy];
-    }][nibName];
+    NSMutableDictionary *offscreenCellDictionary = [(id)self associatedObjectForKey:&kOffscreenCellKey orBlockResult:^id{
+        return [NSMutableDictionary dictionary];
+    }];
+    
+    if (!offscreenCellDictionary[nibName]) {
+        offscreenCellDictionary[nibName] = [self cellFromNibNamed:nibName];
+    }
+    return offscreenCellDictionary[nibName];
 }
 
 #pragma mark - TableViewCellProtocol
