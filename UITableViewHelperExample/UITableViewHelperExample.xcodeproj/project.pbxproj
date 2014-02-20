@@ -24,6 +24,7 @@
 		E167AB6218A534350066D0D2 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */; };
 		E167AB6318A534350066D0D2 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E167AB6018A534350066D0D2 /* MessageTableViewCell.xib */; };
 		E167AB6518A534450066D0D2 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E167AB6418A534450066D0D2 /* avatar.jpg */; };
+		E167ABAE18A928240066D0D2 /* ExpandedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E167ABAD18A928240066D0D2 /* ExpandedTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		E167AB6018A534350066D0D2 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		E167AB6418A534450066D0D2 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		E167ABAC18A928240066D0D2 /* ExpandedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedTextView.h; sourceTree = "<group>"; };
+		E167ABAD18A928240066D0D2 /* ExpandedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				E167AB3D18A532D20066D0D2 /* ViewController.m */,
 				E167AB5C18A534350066D0D2 /* Message.h */,
 				E167AB5D18A534350066D0D2 /* Message.m */,
+				E167ABAC18A928240066D0D2 /* ExpandedTextView.h */,
+				E167ABAD18A928240066D0D2 /* ExpandedTextView.m */,
 				E167AB5E18A534350066D0D2 /* MessageTableViewCell.h */,
 				E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */,
 				E167AB6018A534350066D0D2 /* MessageTableViewCell.xib */,
@@ -287,6 +292,7 @@
 				E167AB6118A534350066D0D2 /* Message.m in Sources */,
 				E167AB6218A534350066D0D2 /* MessageTableViewCell.m in Sources */,
 				E167AB3818A532D20066D0D2 /* AppDelegate.m in Sources */,
+				E167ABAE18A928240066D0D2 /* ExpandedTextView.m in Sources */,
 				E167AB3418A532D20066D0D2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -36,6 +37,7 @@
     [super setObject:message];
 
     self.messageLabel.text = message.text;
+    self.textView.text = message.text;
     self.nameLabel.text = message.sender;
     self.avatarImageView.image = message.avatar;
 }

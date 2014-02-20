@@ -1,6 +1,6 @@
 PODS:
   - RuntimeHelpers (0.0.4)
-  - UITableViewHelper (0.0.1):
+  - UITableViewHelper (0.0.3):
     - RuntimeHelpers
 
 DEPENDENCIES:
@@ -13,6 +13,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   RuntimeHelpers: 06726ff83f7f30aba36ae569d90feff37a28bef7
-  UITableViewHelper: 563a730efccf15bf8baa08e0ac1fc0efc058d4c7
+  UITableViewHelper: 60a6048c533146e2cf8df154be28d6d3b50f4685
 
 COCOAPODS: 0.29.0

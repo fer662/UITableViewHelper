@@ -23,7 +23,7 @@ static char kOffscreenCellKey;
             offscreenCells[nibName] = [self cellFromNibNamed:nibName];
         }
         return [offscreenCells copy];
-    }];
+    }][nibName];
 }
 
 #pragma mark - TableViewCellProtocol
