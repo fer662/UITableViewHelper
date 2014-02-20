@@ -10,11 +10,11 @@
 
 @implementation UITableView (UITableViewHelper)
 
-- (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class
+- (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class forObject:(id)object
 {
-    UITableViewCell<TableViewCellProtocol> *cell = [self dequeueReusableCellWithIdentifier:[class identifier]];
+    UITableViewCell<TableViewCellProtocol> *cell = [self dequeueReusableCellWithIdentifier:[class identifierForNibNamed:[class nibNameForObject:object]]];
     if (!cell) {
-        cell = [class cellFromNib];
+        cell = [class cellFromNibForObject:object];
     }
     
     return cell;
@@ -22,7 +22,7 @@
 
 - (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class withObject:(id)object
 {
-    UITableViewCell<TableViewCellProtocol> *cell = [self cellOfClass:class];
+    UITableViewCell<TableViewCellProtocol> *cell = [self cellOfClass:class forObject:object];
     if ([cell respondsToSelector:@selector(setObject:)]) {
         [cell setObject:object];
     }

@@ -8,28 +8,51 @@
 
 #import "TableViewCell.h"
 
+@interface TableViewCell ()
+
+@property (nonatomic, strong) NSString *identifier;
+
+@end
+
 @implementation TableViewCell
 
 @synthesize object = _object;
 
-+ (instancetype)cellFromNib;
++ (instancetype)cellFromNibForObject:(id)object
 {
-    return [[[NSBundle mainBundle] loadNibNamed:[self identifier] owner:nil options:nil] objectAtIndex:0];
+    return [self cellFromNibNamed:[self nibNameForObject:object]];
 }
 
-+ (NSString *)identifier
++ (instancetype)cellFromNibNamed:(NSString *)nibName;
 {
-    return NSStringFromClass([self class]);
+    id cell = [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] objectAtIndex:0];
+    [cell setIdentifier:[self identifierForNibNamed:nibName]];
+    return cell;
 }
 
 - (NSString *)reuseIdentifier
 {
-    return [[self class] identifier];
+    return self.identifier;
 }
 
 + (CGFloat)heightForObject:(id)object
 {
     return 0;
+}
+
++ (NSString *)identifierForNibNamed:(NSString *)nibName
+{
+    return [NSString stringWithFormat:@"%@_%@", NSStringFromClass(self), nibName];
+}
+
++ (NSArray *)nibNames
+{
+    return @[NSStringFromClass([self class])];
+}
+
++ (NSString *)nibNameForObject:(id)object
+{
+    return NSStringFromClass([self class]);
 }
 
 @end

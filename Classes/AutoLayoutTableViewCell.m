@@ -15,10 +15,14 @@ static char kOffscreenCellKey;
 
 #pragma mark - AutoLayoutTableViewCell
 
-+ (AutoLayoutTableViewCell *)offscreenCell
++ (AutoLayoutTableViewCell *)offscreenCellForNibName:(NSString *)nibName
 {
     return [(id)self associatedObjectForKey:&kOffscreenCellKey orBlockResult:^id{
-        return [self cellFromNib];
+        NSMutableDictionary *offscreenCells = [NSMutableDictionary dictionary];
+        for (NSString *nibName in [self nibNames]) {
+            offscreenCells[nibName] = [self cellFromNibNamed:nibName];
+        }
+        return [offscreenCells copy];
     }];
 }
 
@@ -26,12 +30,14 @@ static char kOffscreenCellKey;
 
 + (CGFloat)heightForObject:(id)object
 {
-    [[self offscreenCell] setObject:object];
+    AutoLayoutTableViewCell *cell = [self offscreenCellForNibName:[self nibNameForObject:object]];
     
-    [[self offscreenCell] setNeedsLayout];
-    [[self offscreenCell] layoutIfNeeded];
+    [cell setObject:object];
     
-    return [[self offscreenCell].contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+    
+    return [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + 1;
 }
 
 #pragma mark -
