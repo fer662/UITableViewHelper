@@ -10,6 +10,11 @@
 
 @implementation UITableView (UITableViewHelper)
 
+- (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class
+{
+    return [self cellOfClass:class forObject:nil];
+}
+
 - (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class forObject:(id)object
 {
     UITableViewCell<TableViewCellProtocol> *cell = [self dequeueReusableCellWithIdentifier:[class identifierForNibNamed:[class nibNameForObject:object]]];

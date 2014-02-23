@@ -11,6 +11,11 @@
 @interface UITableView (UITableViewHelper)
 
 /**
+  Dequeues or creates a new cell of the passed type. Can be used just if the cell class is associated with a single nib file
+ */
+- (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class;
+
+/**
  Dequeues or creates a new cell of the passed type that is able to represent the passed object (it is used to pick the right nib file)
  */
 - (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class forObject:(id)object;
