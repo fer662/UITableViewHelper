@@ -11,6 +11,12 @@
 
 static char kOffscreenCellKey;
 
+@interface AutoLayoutTableViewCell ()
+
+@property (nonatomic, assign) BOOL offscreen;
+
+@end
+
 @implementation AutoLayoutTableViewCell
 
 #pragma mark - AutoLayoutTableViewCell
@@ -22,7 +28,9 @@ static char kOffscreenCellKey;
     }];
     
     if (!offscreenCellDictionary[nibName]) {
-        offscreenCellDictionary[nibName] = [self cellFromNibNamed:nibName];
+        AutoLayoutTableViewCell *cell = [self cellFromNibNamed:nibName];
+        [cell setOffscreen:YES];
+        offscreenCellDictionary[nibName] = cell;
     }
     return offscreenCellDictionary[nibName];
 }

@@ -10,4 +10,11 @@
 
 @interface AutoLayoutTableViewCell : TableViewCell
 
+/**
+ Returns whether this is an offscreen cell, used for height calculation only. You can make optimizations based off this flag
+ within setObject: (i.e. it doesn't really matter if you load the correct image so long as it has the correct size, as 
+ this cell will never be seen).
+ */
+@property (nonatomic, assign, readonly) BOOL offscreen;
+
 @end
