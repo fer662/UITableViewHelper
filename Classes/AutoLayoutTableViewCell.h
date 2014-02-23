@@ -17,4 +17,6 @@
  */
 @property (nonatomic, assign, readonly) BOOL offscreen;
 
++ (AutoLayoutTableViewCell *)offscreenCellForNibName:(NSString *)nibName;
+
 @end
