@@ -12,13 +12,14 @@
 + (instancetype)cellForObject:(id)object inTableView:(UITableView *)tableView;
 
 /**
- returns the height the cell needs to represent the passed object
+ returns the height the cell needs to represent the passed object. Must override.
  */
 + (CGFloat)heightForObject:(id)object inTableView:(UITableView *)tableView;
 
 /**
  returns one of the identifier for the cell with the layout needed to represent the passed object. This is used to
- dequeue the right cell type from a tableView, or to instantiate a new one (identifier is used as nibName)
+ dequeue the right cell type from a tableView, or to instantiate a new one (identifier is used as nibName). Default
+ implementation returns the class name.
  */
 + (NSString *)cellIdentifierForObject:(id)object;
 
