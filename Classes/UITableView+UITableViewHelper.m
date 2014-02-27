@@ -17,9 +17,9 @@
 
 - (UITableViewCell<TableViewCellProtocol> *)cellOfClass:(Class<TableViewCellProtocol>)class forObject:(id)object
 {
-    UITableViewCell<TableViewCellProtocol> *cell = [self dequeueReusableCellWithIdentifier:[class identifierForNibNamed:[class nibNameForObject:object]]];
+    UITableViewCell<TableViewCellProtocol> *cell = [self dequeueReusableCellWithIdentifier:[class cellIdentifierForObject:object]];
     if (!cell) {
-        cell = [class cellFromNibForObject:object];
+        cell = [class cellForObject:object inTableView:self];
     }
     
     return cell;

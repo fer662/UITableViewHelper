@@ -16,4 +16,6 @@
 
 + (Message *)messageWithSender:(NSString *)sender text:(NSString *)text avatar:(UIImage *)avatar;
 
++ (NSArray *)mockMessages;
+
 @end

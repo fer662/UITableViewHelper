@@ -7,6 +7,7 @@
 //
 
 #import "TableViewCell.h"
+#import "UITableView+UITableViewHelper.h"
 
 @interface TableViewCell ()
 
@@ -18,15 +19,18 @@
 
 @synthesize object = _object;
 
-+ (instancetype)cellFromNibForObject:(id)object
++ (instancetype)cellForObject:(id)object inTableView:(UITableView *)tableView
 {
-    return [self cellFromNibNamed:[self nibNameForObject:object]];
+    return [self cellFromIdentifier:[self cellIdentifierForObject:object] inTableView:tableView];
 }
 
-+ (instancetype)cellFromNibNamed:(NSString *)nibName;
++ (instancetype)cellFromIdentifier:(NSString *)identifier inTableView:(UITableView *)tableView
 {
-    id cell = [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] objectAtIndex:0];
-    [cell setIdentifier:[self identifierForNibNamed:nibName]];
+    id cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:nil options:nil] objectAtIndex:0];
+    }
+    [cell setIdentifier:identifier];
     return cell;
 }
 
@@ -35,17 +39,12 @@
     return self.identifier;
 }
 
-+ (CGFloat)heightForObject:(id)object
++ (CGFloat)heightForObject:(id)object inTableView:(UITableView *)tableView
 {
     return 0;
 }
 
-+ (NSString *)identifierForNibNamed:(NSString *)nibName
-{
-    return [NSString stringWithFormat:@"%@_%@", NSStringFromClass(self), nibName];
-}
-
-+ (NSString *)nibNameForObject:(id)object
++ (NSString *)cellIdentifierForObject:(id)object
 {
     return NSStringFromClass([self class]);
 }

@@ -21,25 +21,24 @@ static char kOffscreenCellKey;
 
 #pragma mark - AutoLayoutTableViewCell
 
-+ (AutoLayoutTableViewCell *)offscreenCellForNibName:(NSString *)nibName
++ (AutoLayoutTableViewCell *)offscreenCellForIdentifier:(NSString *)identifier tableView:(UITableView *)tableView
 {
     NSMutableDictionary *offscreenCellDictionary = [(id)self associatedObjectForKey:&kOffscreenCellKey orBlockResult:^id{
         return [NSMutableDictionary dictionary];
     }];
     
-    if (!offscreenCellDictionary[nibName]) {
-        AutoLayoutTableViewCell *cell = [self cellFromNibNamed:nibName];
-        [cell setOffscreen:YES];
-        offscreenCellDictionary[nibName] = cell;
+    if (!offscreenCellDictionary[identifier]) {
+        offscreenCellDictionary[identifier] = [self cellFromIdentifier:identifier inTableView:tableView];
+		[offscreenCellDictionary[identifier] setOffscreen:YES];
     }
-    return offscreenCellDictionary[nibName];
+    return offscreenCellDictionary[identifier];
 }
 
 #pragma mark - TableViewCellProtocol
 
-+ (CGFloat)heightForObject:(id)object
++ (CGFloat)heightForObject:(id)object inTableView:(UITableView *)tableView
 {
-    AutoLayoutTableViewCell *cell = [self offscreenCellForNibName:[self nibNameForObject:object]];
+    AutoLayoutTableViewCell *cell = [self offscreenCellForIdentifier:[self cellIdentifierForObject:object] tableView:tableView];
     
     [cell setObject:object];
     

@@ -17,6 +17,10 @@
  */
 @property (nonatomic, assign, readonly) BOOL offscreen;
 
-+ (AutoLayoutTableViewCell *)offscreenCellForNibName:(NSString *)nibName;
+/**
+ Provides means to get the offscreen cell that is used for the height computation, in case you want to roll your own
+ computation for some reason. (E.G. autolayout being unncessarily slow).
+ */
++ (AutoLayoutTableViewCell *)offscreenCellForIdentifier:(NSString *)identifier tableView:(UITableView *)tableView;
 
 @end

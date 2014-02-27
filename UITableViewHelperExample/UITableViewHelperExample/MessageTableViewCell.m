@@ -30,7 +30,7 @@
 
 #pragma mark - TableViewCellProtocol
 
-+ (NSString *)nibNameForObject:(Message *)object
++ (NSString *)cellIdentifierForObject:(Message *)object
 {
     //The check is crappy because of the nature of our mocked objects, but you get the idea
     if ([object.sender isEqualToString:@"Paul"]) {

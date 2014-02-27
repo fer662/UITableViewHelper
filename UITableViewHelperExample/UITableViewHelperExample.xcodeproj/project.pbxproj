@@ -16,7 +16,7 @@
 		E167AB3418A532D20066D0D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB3318A532D20066D0D2 /* main.m */; };
 		E167AB3818A532D20066D0D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB3718A532D20066D0D2 /* AppDelegate.m */; };
 		E167AB3B18A532D20066D0D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E167AB3918A532D20066D0D2 /* Main.storyboard */; };
-		E167AB3E18A532D20066D0D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB3D18A532D20066D0D2 /* ViewController.m */; };
+		E167AB3E18A532D20066D0D2 /* NibBasedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB3D18A532D20066D0D2 /* NibBasedTableViewController.m */; };
 		E167AB4018A532D20066D0D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E167AB3F18A532D20066D0D2 /* Images.xcassets */; };
 		E167AB4718A532D20066D0D2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E167AB4618A532D20066D0D2 /* XCTest.framework */; };
 		E167AB4818A532D20066D0D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E167AB2718A532D20066D0D2 /* Foundation.framework */; };
@@ -25,6 +25,7 @@
 		E167AB6218A534350066D0D2 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */; };
 		E167AB6318A534350066D0D2 /* MessageTableViewCellOutgoing.xib in Resources */ = {isa = PBXBuildFile; fileRef = E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */; };
 		E167AB6518A534450066D0D2 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E167AB6418A534450066D0D2 /* avatar.jpg */; };
+		E1A1923E18BF7B6A00298BDA /* StoryboardBasedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A1923D18BF7B6A00298BDA /* StoryboardBasedTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,8 @@
 		E167AB3618A532D20066D0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E167AB3718A532D20066D0D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E167AB3A18A532D20066D0D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E167AB3C18A532D20066D0D2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E167AB3D18A532D20066D0D2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E167AB3C18A532D20066D0D2 /* NibBasedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibBasedTableViewController.h; sourceTree = "<group>"; };
+		E167AB3D18A532D20066D0D2 /* NibBasedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NibBasedTableViewController.m; sourceTree = "<group>"; };
 		E167AB3F18A532D20066D0D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E167AB4518A532D20066D0D2 /* UITableViewHelperExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITableViewHelperExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E167AB4618A532D20066D0D2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -63,6 +64,8 @@
 		E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCellOutgoing.xib; sourceTree = "<group>"; };
 		E167AB6418A534450066D0D2 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		E1A1923C18BF7B6900298BDA /* StoryboardBasedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryboardBasedTableViewController.h; sourceTree = "<group>"; };
+		E1A1923D18BF7B6A00298BDA /* StoryboardBasedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardBasedTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,17 +127,11 @@
 		E167AB2D18A532D20066D0D2 /* UITableViewHelperExample */ = {
 			isa = PBXGroup;
 			children = (
+				E1A1923B18BF7B4600298BDA /* Storyboard Based */,
+				E1A1923A18BF7B1200298BDA /* Nib Based */,
 				E167AB3618A532D20066D0D2 /* AppDelegate.h */,
 				E167AB3718A532D20066D0D2 /* AppDelegate.m */,
 				E167AB3918A532D20066D0D2 /* Main.storyboard */,
-				E167AB3C18A532D20066D0D2 /* ViewController.h */,
-				E167AB3D18A532D20066D0D2 /* ViewController.m */,
-				E167AB5C18A534350066D0D2 /* Message.h */,
-				E167AB5D18A534350066D0D2 /* Message.m */,
-				E167AB5E18A534350066D0D2 /* MessageTableViewCell.h */,
-				E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */,
-				E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */,
-				E133860418B6798B004ED023 /* MessageTableViewCellIncoming.xib */,
 				E167AB6418A534450066D0D2 /* avatar.jpg */,
 				E167AB3F18A532D20066D0D2 /* Images.xcassets */,
 				E167AB2E18A532D20066D0D2 /* Supporting Files */,
@@ -151,6 +148,30 @@
 				E167AB3518A532D20066D0D2 /* UITableViewHelperExample-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1A1923A18BF7B1200298BDA /* Nib Based */ = {
+			isa = PBXGroup;
+			children = (
+				E167AB3C18A532D20066D0D2 /* NibBasedTableViewController.h */,
+				E167AB3D18A532D20066D0D2 /* NibBasedTableViewController.m */,
+				E167AB5C18A534350066D0D2 /* Message.h */,
+				E167AB5D18A534350066D0D2 /* Message.m */,
+				E167AB5E18A534350066D0D2 /* MessageTableViewCell.h */,
+				E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */,
+				E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */,
+				E133860418B6798B004ED023 /* MessageTableViewCellIncoming.xib */,
+			);
+			name = "Nib Based";
+			sourceTree = "<group>";
+		};
+		E1A1923B18BF7B4600298BDA /* Storyboard Based */ = {
+			isa = PBXGroup;
+			children = (
+				E1A1923C18BF7B6900298BDA /* StoryboardBasedTableViewController.h */,
+				E1A1923D18BF7B6A00298BDA /* StoryboardBasedTableViewController.m */,
+			);
+			name = "Storyboard Based";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,8 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E167AB3E18A532D20066D0D2 /* ViewController.m in Sources */,
+				E167AB3E18A532D20066D0D2 /* NibBasedTableViewController.m in Sources */,
 				E167AB6118A534350066D0D2 /* Message.m in Sources */,
+				E1A1923E18BF7B6A00298BDA /* StoryboardBasedTableViewController.m in Sources */,
 				E167AB6218A534350066D0D2 /* MessageTableViewCell.m in Sources */,
 				E167AB3818A532D20066D0D2 /* AppDelegate.m in Sources */,
 				E167AB3418A532D20066D0D2 /* main.m in Sources */,

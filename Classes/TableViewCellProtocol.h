@@ -8,23 +8,19 @@
 
 @protocol TableViewCellProtocol <NSObject>
 
-+ (instancetype)cellFromNibNamed:(NSString *)nibName;
-+ (instancetype)cellFromNibForObject:(id)object;
-
-/**
- returns what the identifier for cells using the passed nibName
- */
-+ (NSString *)identifierForNibNamed:(NSString *)nibName;
++ (instancetype)cellFromIdentifier:(NSString *)identifier inTableView:(UITableView *)tableView;
++ (instancetype)cellForObject:(id)object inTableView:(UITableView *)tableView;
 
 /**
  returns the height the cell needs to represent the passed object
  */
-+ (CGFloat)heightForObject:(id)object;
++ (CGFloat)heightForObject:(id)object inTableView:(UITableView *)tableView;
 
 /**
- returns one of the nib file names with the layout needed to represent the passed object
+ returns one of the identifier for the cell with the layout needed to represent the passed object. This is used to
+ dequeue the right cell type from a tableView, or to instantiate a new one (identifier is used as nibName)
  */
-+ (NSString *)nibNameForObject:(id)object;
++ (NSString *)cellIdentifierForObject:(id)object;
 
 @optional
 
