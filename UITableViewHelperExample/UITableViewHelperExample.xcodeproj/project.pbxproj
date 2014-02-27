@@ -127,10 +127,13 @@
 		E167AB2D18A532D20066D0D2 /* UITableViewHelperExample */ = {
 			isa = PBXGroup;
 			children = (
+				E1A1923F18BF845000298BDA /* Model */,
 				E1A1923B18BF7B4600298BDA /* Storyboard Based */,
 				E1A1923A18BF7B1200298BDA /* Nib Based */,
 				E167AB3618A532D20066D0D2 /* AppDelegate.h */,
 				E167AB3718A532D20066D0D2 /* AppDelegate.m */,
+				E167AB5E18A534350066D0D2 /* MessageTableViewCell.h */,
+				E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */,
 				E167AB3918A532D20066D0D2 /* Main.storyboard */,
 				E167AB6418A534450066D0D2 /* avatar.jpg */,
 				E167AB3F18A532D20066D0D2 /* Images.xcassets */,
@@ -155,10 +158,6 @@
 			children = (
 				E167AB3C18A532D20066D0D2 /* NibBasedTableViewController.h */,
 				E167AB3D18A532D20066D0D2 /* NibBasedTableViewController.m */,
-				E167AB5C18A534350066D0D2 /* Message.h */,
-				E167AB5D18A534350066D0D2 /* Message.m */,
-				E167AB5E18A534350066D0D2 /* MessageTableViewCell.h */,
-				E167AB5F18A534350066D0D2 /* MessageTableViewCell.m */,
 				E167AB6018A534350066D0D2 /* MessageTableViewCellOutgoing.xib */,
 				E133860418B6798B004ED023 /* MessageTableViewCellIncoming.xib */,
 			);
@@ -172,6 +171,15 @@
 				E1A1923D18BF7B6A00298BDA /* StoryboardBasedTableViewController.m */,
 			);
 			name = "Storyboard Based";
+			sourceTree = "<group>";
+		};
+		E1A1923F18BF845000298BDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E167AB5C18A534350066D0D2 /* Message.h */,
+				E167AB5D18A534350066D0D2 /* Message.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

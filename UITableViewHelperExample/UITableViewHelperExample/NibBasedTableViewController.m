@@ -14,11 +14,13 @@
 @interface NibBasedTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *messages;
+@property (strong, nonatomic) NSArray *messages;
 
 @end
 
 @implementation NibBasedTableViewController
+
+#pragma mark - UIViewController
 
 - (void)viewDidLoad
 {

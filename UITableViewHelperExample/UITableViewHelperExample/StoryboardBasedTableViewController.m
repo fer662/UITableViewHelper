@@ -14,11 +14,13 @@
 @interface StoryboardBasedTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *messages;
+@property (strong, nonatomic) NSArray *messages;
 
 @end
 
 @implementation StoryboardBasedTableViewController
+
+#pragma mark - UIViewController
 
 - (void)viewDidLoad
 {
@@ -46,12 +48,6 @@
     return [MessageTableViewCell heightForObject:self.messages[indexPath.row] inTableView:tableView];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 10;
-}
-
 #pragma mark -
-
 
 @end

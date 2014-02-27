@@ -36,6 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DAX-cW-He0" secondAttribute="bottom" constant="10" id="8y2-Z5-P51"/>
                     <constraint firstItem="Uk6-El-orx" firstAttribute="top" secondItem="zUd-MX-6eW" secondAttribute="top" constant="10" id="ENV-ua-pnH"/>
