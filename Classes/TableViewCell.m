@@ -7,7 +7,6 @@
 //
 
 #import "TableViewCell.h"
-#import "UITableView+UITableViewHelper.h"
 
 @interface TableViewCell ()
 
@@ -24,11 +23,17 @@
     return [self cellFromIdentifier:[self cellIdentifierForObject:object] inTableView:tableView];
 }
 
++ (instancetype)cellFromNibWithIdentifier:(NSString *)identifier
+{
+    return [[[NSBundle mainBundle] loadNibNamed:identifier owner:nil options:nil] objectAtIndex:0];
+}
+
 + (instancetype)cellFromIdentifier:(NSString *)identifier inTableView:(UITableView *)tableView
 {
     id cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:nil options:nil] objectAtIndex:0];
+        [tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     }
     [cell setIdentifier:identifier];
     return cell;
@@ -37,6 +42,11 @@
 - (NSString *)reuseIdentifier
 {
     return self.identifier;
+}
+
++ (CGFloat)heightForObject:(id)object
+{
+    return [self heightForObject:object inTableView:nil];
 }
 
 + (CGFloat)heightForObject:(id)object inTableView:(UITableView *)tableView
