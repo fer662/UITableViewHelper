@@ -32,11 +32,21 @@
 {
     id cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        [tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if ([self useUINib]) {
+            [tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
+            cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        }
+        else {
+            cell = [self cellFromNibWithIdentifier:identifier];
+        }
     }
     [cell setIdentifier:identifier];
     return cell;
+}
+
++ (BOOL)useUINib
+{
+    return NO;
 }
 
 - (NSString *)reuseIdentifier
