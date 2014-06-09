@@ -23,7 +23,7 @@ static char kOffscreenCellKey;
 
 + (AutoLayoutTableViewCell *)offscreenCellForIdentifier:(NSString *)identifier tableView:(UITableView *)tableView
 {
-    NSMutableDictionary *offscreenCellDictionary = [(id)self associatedObjectForKey:&kOffscreenCellKey orBlockResult:^id{
+    NSMutableDictionary *offscreenCellDictionary = [(id)tableView associatedObjectForKey:&kOffscreenCellKey orBlockResult:^id{
         return [NSMutableDictionary dictionary];
     }];
     
